@@ -8,7 +8,7 @@
 #
 # And be sure to use new-style password hashing:
 #   http://dev.mysql.com/doc/refman/5.7/en/old-client.html
-
+#
 default: &default
  adapter: mysql2
  encoding: utf8
@@ -51,7 +51,4 @@ test:
 #
 production:
  <<: *default
--  database: potepanec_2_7_production
--  username: potepanec
--  password: <%= ENV['POTEPANEC_DATABASE_PASSWORD'] %>
-+  url: <%= ENV['JAWSDB_URL']&.sub('mysql://', 'mysql2://') %>
+ url: <%= ENV['JAWSDB_URL']&.sub('mysql://', 'mysql2://') %>
