@@ -3,7 +3,7 @@
 
  # Rails用に最適化
  Rails:
-   Enabled: trueC
+   Enabled: true
 
 # 文字数の上限を８０文字から変更
 LineLength:
