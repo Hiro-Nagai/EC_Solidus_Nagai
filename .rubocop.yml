@@ -7,7 +7,7 @@
 
 # 文字数の上限を８０文字から変更
 LineLength:
-  Max: 130
+  Max: 140
 
 #以下にはrubocopで検証したくないフォルダを指定する
 AllCops:
