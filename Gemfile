@@ -36,7 +36,7 @@ gem 'solidus', '~> 2.11.0'
 gem 'solidus_auth_devise'
 gem 'solidus_i18n', github: 'solidusio-contrib/solidus_i18n', branch: 'master'
 gem 'paypalhttp', '~> 1.0'
-gem 'solidus_auth_devise'
+
 gem 'solidus_paypal_commerce_platform'
 
 group :development, :test do

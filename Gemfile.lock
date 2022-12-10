@@ -1167,6 +1167,7 @@ GEM
     aws-sigv4 (1.2.3)
       aws-eventstream (~> 1, >= 1.0.2)
     bcrypt (3.1.16)
+    bcrypt (3.1.16-java)
     bindex (0.8.1)
     bootsnap (1.7.5)
       msgpack (~> 1.0)
@@ -1213,6 +1214,7 @@ GEM
       factory_bot (~> 6.2.0)
       railties (>= 5.0.0)
     ffi (1.15.0)
+    ffi (1.15.0-java)
     font-awesome-rails (4.7.0.7)
       railties (>= 3.2, < 7)
     friendly_id (5.4.2)
@@ -1272,10 +1274,14 @@ GEM
     money (6.16.0)
       i18n (>= 0.6.4, <= 2)
     msgpack (1.4.2)
+    msgpack (1.4.2-java)
     mysql2 (0.5.3)
     nio4r (2.5.7)
+    nio4r (2.5.7-java)
     nokogiri (1.11.3)
       mini_portile2 (~> 2.5.0)
+      racc (~> 1.4)
+    nokogiri (1.11.3-java)
       racc (~> 1.4)
     orm_adapter (0.5.0)
     paperclip (6.1.0)
@@ -1296,6 +1302,10 @@ GEM
     pry (0.13.1)
       coderay (~> 1.1)
       method_source (~> 1.0)
+    pry (0.13.1-java)
+      coderay (~> 1.1)
+      method_source (~> 1.0)
+      spoon (~> 0.0)
     pry-byebug (3.9.0)
       byebug (~> 11.0)
       pry (~> 0.13.0)
@@ -1306,7 +1316,10 @@ GEM
       pry (>= 0.10.4)
     puma (5.2.2)
       nio4r (~> 2.0)
+    puma (5.2.2-java)
+      nio4r (~> 2.0)
     racc (1.5.2)
+    racc (1.5.2-java)
     rack (2.2.3)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
@@ -1489,6 +1502,8 @@ GEM
     solidus_webhooks (0.4.0)
       solidus_core (>= 2.0.0, < 4)
       solidus_support (~> 0.6)
+    spoon (0.0.6)
+      ffi
     spring (2.1.1)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
@@ -1514,6 +1529,8 @@ GEM
     truncate_html (0.9.3)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
+    tzinfo-data (1.2022.7)
+      tzinfo (>= 1.0.0)
     uglifier (4.2.0)
       execjs (>= 0.3.0, < 3)
     unicode-display_width (1.8.0)
@@ -1526,12 +1543,16 @@ GEM
       railties (>= 6.0.0)
     websocket-driver (0.7.3)
       websocket-extensions (>= 0.1.0)
+    websocket-driver (0.7.3-java)
+      websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
     yard (0.9.26)
     zeitwerk (2.4.2)
 
 PLATFORMS
+  java
   ruby
+  unknown
 
 DEPENDENCIES
   annotate
