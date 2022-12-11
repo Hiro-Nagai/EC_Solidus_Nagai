@@ -26,55 +26,55 @@ end
 images = {
   products[:solidus_tshirt].master => [
     {
-      attachment: image("solidus_tshirt")
+      attachment: image("solidus_tshirt"),
     },
     {
-      attachment: image("solidus_tshirt_back")
-    }
+      attachment: image("solidus_tshirt_back"),
+    },
   ],
   products[:solidus_snapback_cap].master => [
     {
-      attachment: image("solidus_snapback_cap")
-    }
+      attachment: image("solidus_snapback_cap"),
+    },
   ],
   products[:solidus_hoodie].master => [
     {
-      attachment: image("solidus_hoodie")
-    }
+      attachment: image("solidus_hoodie"),
+    },
   ],
   products[:ruby_hoodie].master => [
     {
-      attachment: image("ruby_hoodie")
-    }
+      attachment: image("ruby_hoodie"),
+    },
   ],
   products[:ruby_hoodie_zip].master => [
     {
-      attachment: image("ruby_hoodie_zip")
-    }
+      attachment: image("ruby_hoodie_zip"),
+    },
   ],
   products[:ruby_polo].master => [
     {
-      attachment: image("ruby_polo")
+      attachment: image("ruby_polo"),
     },
     {
-      attachment: image("ruby_polo_back")
-    }
+      attachment: image("ruby_polo_back"),
+    },
   ],
   products[:ruby_mug].master => [
     {
-      attachment: image("ruby_mug")
-    }
+      attachment: image("ruby_mug"),
+    },
   ],
   products[:solidus_tote].master => [
     {
-      attachment: image("tote_bag_solidus")
-    }
+      attachment: image("tote_bag_solidus"),
+    },
   ],
   products[:solidus_girly].master => [
     {
-      attachment: image("solidus_girly")
-    }
-  ]
+      attachment: image("solidus_girly"),
+    },
+  ],
 }
 
 products[:solidus_tshirt].variants.each do |variant|

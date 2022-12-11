@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 # This migration comes from solidus_auth (originally 20190125170630)
 
 class AddResetPasswordTokenIndexToSpreeUsers < SolidusSupport::Migration[4.2]

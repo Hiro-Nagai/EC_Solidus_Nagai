@@ -15,7 +15,7 @@ products = {
   ruby_hoodie_zip: "Ruby Hoodie Zip",
   ruby_polo: "Ruby Polo",
   ruby_mug: "Ruby Mug",
-  solidus_girly: "Solidus Girly"
+  solidus_girly: "Solidus Girly",
 }
 
 products.each do |key, name|
@@ -26,12 +26,12 @@ taxons = [
   {
     name: "Categories",
     taxonomy: categories,
-    position: 0
+    position: 0,
   },
   {
     name: "Clothing",
     taxonomy: categories,
-    parent: "Categories"
+    parent: "Categories",
   },
   {
     name: "Caps",
@@ -39,8 +39,8 @@ taxons = [
     parent: "Categories",
     position: 1,
     products: [
-      products[:solidus_snapback_cap]
-    ]
+      products[:solidus_snapback_cap],
+    ],
   },
   {
     name: "Bags",
@@ -48,8 +48,8 @@ taxons = [
     parent: "Categories",
     position: 2,
     products: [
-      products[:solidus_tote]
-    ]
+      products[:solidus_tote],
+    ],
   },
   {
     name: "Mugs",
@@ -57,8 +57,8 @@ taxons = [
     parent: "Categories",
     position: 3,
     products: [
-      products[:ruby_mug]
-    ]
+      products[:ruby_mug],
+    ],
   },
   {
     name: "Shirts",
@@ -67,8 +67,8 @@ taxons = [
     position: 0,
     products: [
       products[:ruby_polo],
-      products[:solidus_girly]
-    ]
+      products[:solidus_girly],
+    ],
   },
   {
     name: "Hoodie",
@@ -78,21 +78,21 @@ taxons = [
     products: [
       products[:solidus_hoodie],
       products[:ruby_hoodie],
-      products[:ruby_hoodie_zip]
-    ]
+      products[:ruby_hoodie_zip],
+    ],
   },
   {
     name: "T-Shirts",
     taxonomy: categories,
     parent: "Clothing",
     products: [
-      products[:solidus_tshirt]
+      products[:solidus_tshirt],
     ],
-    position: 0
+    position: 0,
   },
   {
     name: "Brands",
-    taxonomy: brands
+    taxonomy: brands,
   },
   {
     name: "Solidus",
@@ -103,8 +103,8 @@ taxons = [
       products[:solidus_snapback_cap],
       products[:solidus_hoodie],
       products[:solidus_tote],
-      products[:solidus_girly]
-    ]
+      products[:solidus_girly],
+    ],
   },
   {
     name: "Ruby",
@@ -114,9 +114,9 @@ taxons = [
       products[:ruby_hoodie],
       products[:ruby_hoodie_zip],
       products[:ruby_polo],
-      products[:ruby_mug]
-    ]
-  }
+      products[:ruby_mug],
+    ],
+  },
 ]
 
 taxons.each do |taxon_attrs|

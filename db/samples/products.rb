@@ -17,7 +17,7 @@ descriptions = [
 
 default_attrs = {
   description: descriptions.sample,
-  available_on: Time.current
+  available_on: Time.current,
 }
 
 products = [
@@ -30,7 +30,7 @@ products = [
     weight: 0.5,
     height: 20,
     width: 10,
-    depth: 5
+    depth: 5,
   },
   {
     name: "Solidus Girly",
@@ -41,7 +41,7 @@ products = [
     weight: 0.5,
     height: 20,
     width: 10,
-    depth: 5
+    depth: 5,
   },
   {
     name: "Solidus Snapback Cap",
@@ -52,7 +52,7 @@ products = [
     weight: 0.5,
     height: 5,
     width: 5,
-    depth: 5
+    depth: 5,
   },
   {
     name: "Solidus Hoodie Zip",
@@ -63,7 +63,7 @@ products = [
     weight: 1,
     height: 20,
     width: 10,
-    depth: 5
+    depth: 5,
   },
   {
     name: "Ruby Hoodie",
@@ -74,7 +74,7 @@ products = [
     weight: 1,
     height: 20,
     width: 10,
-    depth: 5
+    depth: 5,
   },
   {
     name: "Ruby Hoodie Zip",
@@ -85,7 +85,7 @@ products = [
     weight: 0.8,
     height: 20,
     width: 10,
-    depth: 5
+    depth: 5,
   },
   {
     name: "Ruby Polo",
@@ -96,7 +96,7 @@ products = [
     weight: 0.5,
     height: 20,
     width: 10,
-    depth: 5
+    depth: 5,
   },
   {
     name: "Ruby Mug",
@@ -107,7 +107,7 @@ products = [
     weight: 1,
     height: 5,
     width: 5,
-    depth: 5
+    depth: 5,
   },
   {
     name: "Solidus Tote",
@@ -118,8 +118,8 @@ products = [
     weight: 0.5,
     height: 20,
     width: 10,
-    depth: 5
-  }
+    depth: 5,
+  },
 ]
 
 products.each do |product_attrs|

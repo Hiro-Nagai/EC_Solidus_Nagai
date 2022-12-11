@@ -10,7 +10,7 @@ LineLength:
   Max: 130
 
 #以下にはrubocopで検証したくないフォルダを指定する
-AllCops:
+ AllCops:
   Exclude:
     - 'db/**/*'
     - 'bin/*'
@@ -21,3 +21,7 @@ AllCops:
     - 'lib/tasks/*'
     - 'vendor/**/*'
     - 'path/ruby'
+    - 'test/**/*'
+    - 'spec/**/*'
+    - 'config/**/*'
+    - 'Gemfile'
