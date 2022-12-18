@@ -3,3 +3,4 @@ class Potepan::ProductsController < ApplicationController
   @product = Spree::Product.find(params[:id])
   end
 end
+
