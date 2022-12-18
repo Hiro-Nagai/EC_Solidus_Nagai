@@ -25,3 +25,4 @@ AllCops:
     - 'spec/**/*'
     - 'config/**/*'
     - 'Gemfile'
+    - 'app/controllers'
