@@ -2,16 +2,19 @@ require 'rails_helper'
 
 RSpec.describe "Products", type: :request do
   describe "GET /index" do
-    pending "add some examples (or delete) #{__FILE__}"
+    pending "add some examples (or delete) #{__FILE__}"  
 
   end
+
+  describe "routes", type: :routing do
+    it "ルートresources :products, only: [:show]確認" do
+      expect(get: "potepan/products").to route_to(controller: "products", action: "show")
+  end
+
+
 end
 
-describe "routes", type: :routing do
-  it "ルートresources :products, only: [:show]確認" do
-    expect(get: "potepan/products").to route_to(controller: "products", action: "show")
-  end
-end
+
 
 
 
