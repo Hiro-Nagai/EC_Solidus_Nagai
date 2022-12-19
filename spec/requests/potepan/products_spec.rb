@@ -9,7 +9,6 @@ RSpec.describe "Products", type: :request do
     end
 
 
-    
   end
 end
 
