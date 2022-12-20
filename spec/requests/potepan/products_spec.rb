@@ -1,63 +1,33 @@
-# frozen_string_literal: true
-
 require 'rails_helper'
+require 'spree/testing_support/factories' 
 
-RSpec.describe 'Products_request', type: :request do
-  describe 'GET /potepan/products/:id' do
-    
-    
-    let!(:product) { create(:product,) }
+RSpec.describe "Products", type: :request do
+  describe "GET #show" do
+    let!(:product) { create(:product) }
+    let!(:image) { create(:image) }
 
     before do
-      get potepan_products_path(product.id)
+      product.images << image
+      get potepan_product_path(product.id)
+      # 画像URL取得が上手くいかない問題への対応
+      # https://mng-camp.potepan.com/curriculums/document-for-final-task-2#notes-of-image-test
+      ActiveStorage::Current.host = request.base_url
     end
 
-    it 'returns 200 response' do
-      expect(response).to have_http_status(200)
+    it "ページが表示されていること" do
+      expect(response).to have_http_status(:success)
     end
 
-    it 'shows a product information' do
+    it "商品の名前が表示されていること" do
       expect(response.body).to include product.name
+    end
+
+    it "商品の価格が表示されていること" do
       expect(response.body).to include product.display_price.to_s
+    end
+
+    it "商品の説明が表示されていること" do
       expect(response.body).to include product.description
     end
   end
 end
-
-
-
-
-
-
-
-=begin
-rescue => exception
-  
-end
-# frozen_string_literal: true
-
-require 'rails_helper'
-
-RSpec.describe 'Products_request', type: :request do
-  describe 'GET /potepan/products/:id' do
-
-    
-    
-    !let(:product) { create(:product)  } 
-
-    before do
-      get potepan_products_path(product.id)
-    end
-
-    it 'returns 200 response' do
-      expect(response).to have_http_status(200)
-    end
-
-    it 'shows a product information' do
-      expect(response.body).to include product.name
-      expect(response.body).to include product.display_price.to_s
-      expect(response.body).to include product.description
-    end
-  end
-end
-=end
