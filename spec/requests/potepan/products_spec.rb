@@ -3,8 +3,8 @@ require 'spree/testing_support/factories'
 
 RSpec.describe "Products", type: :request do
   describe "GET #show" do
-    let!(:product) { create(:product) }
-    let!(:image) { create(:image) }
+    let(:product) { create(:product) }
+    let(:image) { create(:image) }
 
     before do
       product.images << image
