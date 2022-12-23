@@ -3,8 +3,6 @@
   <head>
     <meta charset="utf-8">
     <%= csrf_meta_tags %>
-    <!-- GOOGLE FONT -->
-    <%= stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Oxygen:400,300,700', :media => "all" %>
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,5 +17,7 @@
     <footer>
       <%= render "potepan/shared/footer" %>
     </footer>
+    <!-- GOOGLE FONT -->
+    <%= stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Oxygen:400,300,700', :media => "all" %>
   </body>
 </html>
