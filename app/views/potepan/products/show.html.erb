@@ -1,6 +1,6 @@
 <% provide(:title, @product.name) %>
 <div class="main-wrapper">
-  <!-- LIGHT SECTION --->
+  <!-- LIGHT SECTION -->
   <section class="lightSection clearfix pageHeader">
     <div class="container">
       <div class="row">
@@ -11,9 +11,7 @@
         </div>
         <div class="col-xs-6">
           <ol class="breadcrumb pull-right">
-            <li>
-              <%= link_to 'Home', potepan_path, id: "home_link_show" %>
-            </li>
+            <li><%= link_to 'Home', potepan_path %></li>                          
             <li class="active"><%= @product.name %></li>
           </ol>
         </div>
@@ -39,11 +37,11 @@
               <div class="clearfix">
                 <div id="thumbcarousel" class="carousel slide" data-interval="false">
                   <div class="carousel-inner">
-                      <% @product.images.each_with_index do |image, i| %>
-                        <div data-target="#carousel" data-slide-to="<%= i %>" class="thumb" id="<%= "image_small_#{i}" %>">
-                          <%= image_tag(image.attachment(:small)) %>
-                        </div>
-                      <% end %>
+                    <% @product.images.each_with_index do |image, i| %>
+                      <div data-target="#carousel" data-slide-to="<%= i %>" class="thumb" id="<%= "image_small_#{i}" %>">
+                        <%= image_tag(image.attachment(:small)) %>
+                      </div>
+                    <% end %>
                   </div>
                   <a class="left carousel-control" href="#thumbcarousel" role="button" data-slide="prev">
                     <span class="glyphicon glyphicon-chevron-left"></span>
