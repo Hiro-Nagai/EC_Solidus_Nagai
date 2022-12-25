@@ -10,14 +10,10 @@
     <title><%= full_title(yield(:title)) %></title>
   </head>
   <body>
-    <header>
-      <%= render "potepan/shared/header" %>
-    </header>
+    <%= render "potepan/shared/header" %>    
     <%= yield %>
-    <footer>
-      <%= render "potepan/shared/footer" %>
-    </footer>
-    <!-- GOOGLE FONT -->
+    <%= render "potepan/shared/footer" %>    
+    <!-- GOOGLE FONT --->
     <%= stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Oxygen:400,300,700', :media => "all" %>
   </body>
 </html>
