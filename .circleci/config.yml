@@ -66,8 +66,7 @@ jobs:
       - run:
           name: Run post-deploy tasks
           command: |
-            heroku config:set AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
-            heroku run bin/rails db:migrate
+            heroku run bin/rails db:migrate -a $HEROKU_APP_NAME
 
 orbs:
   build-tools: circleci/build-tools@2.6.3
