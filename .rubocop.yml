@@ -20,5 +20,5 @@ AllCops:
     - 'path/ruby'
     - 'test/**/*'
     - 'spec/**/*'
-    - 'config/**/*'
     - 'Gemfile'
+    

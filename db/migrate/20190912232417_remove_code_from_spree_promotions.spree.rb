@@ -1,5 +1,4 @@
 # frozen_string_literal: true
-
 # This migration comes from spree (originally 20190106184413)
 
 require 'solidus/migrations/promotions_with_code_handlers'

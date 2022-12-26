@@ -1,5 +1,4 @@
 # frozen_string_literal: true
-
 # This migration comes from spree (originally 20180710170104)
 
 class CreateSpreeStoreCreditReasonsTable < ActiveRecord::Migration[5.1]
