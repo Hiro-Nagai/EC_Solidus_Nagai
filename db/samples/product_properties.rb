@@ -5,14 +5,14 @@ products =
     "Solidus Tote" =>
     {
       "Type" => "Tote",
-      "Size" => %(15" x 18" x 6"),
-      "Material" => "Canvas",
+      "Size" => %{15" x 18" x 6"},
+      "Material" => "Canvas"
     },
     "Solidus Snapback Cap" =>
     {
       "Type" => "Snapback Cap",
       "Size" => "One Size",
-      "Material" => "100% Cotton",
+      "Material" => "100% Cotton"
     },
     "Solidus T-Shirt" =>
     {
@@ -23,7 +23,7 @@ products =
       "Sleeve Type" => "Short",
       "Made from" => "100% Cotton",
       "Fit" => "Loose",
-      "Gender" => "Men's",
+      "Gender" => "Men's"
     },
     "Solidus Hoodie Zip" =>
     {
@@ -34,7 +34,7 @@ products =
       "Sleeve Type" => "Long",
       "Made from" => "100% cotton",
       "Fit" => "Loose",
-      "Gender" => "Unisex",
+      "Gender" => "Unisex"
     },
     "Ruby Hoodie" =>
     {
@@ -45,7 +45,7 @@ products =
       "Sleeve Type" => "Long",
       "Made from" => "90% Cotton, 10% Nylon",
       "Fit" => "Loose",
-      "Gender" => "Unisex",
+      "Gender" => "Unisex"
     },
     "Ruby Hoodie Zip" =>
     {
@@ -56,7 +56,7 @@ products =
       "Sleeve Type" => "Long",
       "Made from" => "100% cotton",
       "Fit" => "Loose",
-      "Gender" => "Unisex",
+      "Gender" => "Unisex"
     },
     "Ruby Polo" =>
     {
@@ -67,12 +67,12 @@ products =
       "Sleeve Type" => "Short",
       "Made from" => "100% Cotton",
       "Fit" => "Slim",
-      "Gender" => "Men's",
+      "Gender" => "Men's"
     },
     "Ruby Mug" =>
     {
       "Type" => "Mug",
-      "Size" => %(4.5" tall, 3.25" dia.),
+      "Size" => %(4.5" tall, 3.25" dia.)
     },
     "Solidus Girly" =>
     {
@@ -83,8 +83,8 @@ products =
       "Sleeve Type" => "Short",
       "Made from" => "90% Cotton, 10% Nylon",
       "Fit" => "Slim",
-      "Gender" => "Women's",
-    },
+      "Gender" => "Women's"
+    }
   }
 
 products.each do |name, properties|

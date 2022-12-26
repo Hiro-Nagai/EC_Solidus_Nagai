@@ -24,77 +24,77 @@ variants = [
     product: solidus_tshirt,
     option_values: [small, black],
     sku: "SOL-00002",
-    cost_price: 17,
+    cost_price: 17
   },
   {
     product: solidus_tshirt,
     option_values: [small, white],
     sku: "SOL-00004",
-    cost_price: 17,
+    cost_price: 17
   },
   {
     product: solidus_girly,
     option_values: [small, black],
     sku: "SOL-WM001",
-    cost_price: 17,
+    cost_price: 17
   },
   {
     product: solidus_girly,
     option_values: [small, white],
     sku: "SOL-WM003",
-    cost_price: 17,
+    cost_price: 17
   },
   {
     product: solidus_girly,
     option_values: [medium, white],
     sku: "SOL-WM005",
-    cost_price: 17,
+    cost_price: 17
   },
   {
     product: solidus_girly,
     option_values: [medium, black],
     sku: "SOL-WM006",
-    cost_price: 17,
-  },
+    cost_price: 17
+  }
 ]
 
 masters = {
   solidus_tote => {
     sku: "SOL-TOT01",
-    cost_price: 17,
+    cost_price: 17
   },
   solidus_snapback_cap => {
     sku: "SOL-SNC01",
-    cost_price: 17,
+    cost_price: 17
   },
   solidus_tshirt => {
     sku: "SOL-00001",
-    cost_price: 17,
+    cost_price: 17
   },
   solidus_hoodie => {
     sku: "SOL-HD00",
-    cost_price: 27,
+    cost_price: 27
   },
   ruby_hoodie => {
     sku: "RUB-HD01",
-    cost_price: 27,
+    cost_price: 27
   },
   ruby_hoodie_zip => {
     sku: "RUB-HD00",
-    cost_price: 27,
+    cost_price: 27
   },
   ruby_polo => {
     sku: "RUB-PL01",
-    cost_price: 23,
+    cost_price: 23
   },
   ruby_mug => {
     sku: "RUB-MG01",
-    cost_price: 7,
+    cost_price: 7
   },
   solidus_girly => {
     sku: "SOL-WM00",
-    cost_price: 17,
-  },
+    cost_price: 17
+  }
 }
 
 Spree::Variant.create!(variants)

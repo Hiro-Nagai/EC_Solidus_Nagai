@@ -10,24 +10,24 @@ Spree::OptionValue.create!([
     name: "Small",
     presentation: "S",
     position: 1,
-    option_type: size,
+    option_type: size
   },
   {
     name: "Medium",
     presentation: "M",
     position: 2,
-    option_type: size,
+    option_type: size
   },
   {
     name: "Black",
     presentation: "Black",
     position: 1,
-    option_type: color,
+    option_type: color
   },
   {
     name: "White",
     presentation: "White",
     position: 2,
-    option_type: color,
-  },
+    option_type: color
+  }
 ])
