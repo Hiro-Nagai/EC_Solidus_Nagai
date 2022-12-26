@@ -39,6 +39,7 @@ Spree.config do |config|
   # config.layout = "spree/layouts/spree_application"
 
   
+  
   # Admin:
 
   # Custom logo for the admin
