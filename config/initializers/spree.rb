@@ -37,6 +37,8 @@ Spree.config do |config|
 
   # Template to use when rendering layout
   # config.layout = "spree/layouts/spree_application"
+
+  
   # Admin:
 
   # Custom logo for the admin

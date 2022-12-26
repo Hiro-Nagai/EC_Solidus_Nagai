@@ -11,6 +11,7 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema.define(version: 2021_05_16_054806) do
+  
   create_table "action_mailbox_inbound_emails", charset: "utf8mb3", force: :cascade do |t|
     t.integer "status", default: 0, null: false
     t.string "message_id", null: false
