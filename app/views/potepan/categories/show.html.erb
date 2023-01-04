@@ -1,43 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-
-    <!-- SITE TITTLE -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Product Grid Sidebar Left - BIGBAG Store</title>
-
-    <!-- PLUGINS CSS STYLE -->
-
-    <!-- GOOGLE FONT -->
-    <%= stylesheet_link_tag "application", 'https://fonts.googleapis.com/css?family=Oxygen:400,300,700', :media => "all" %>
-
-  </head>
-
-  <body>
-
-    <div class="main-wrapper">
-
-
+<% provide(:title, @taxon.name) %>
+   <div class="main-wrapper">
       <!-- LIGHT SECTION -->
       <section class="lightSection clearfix pageHeader">
         <div class="container">
           <div class="row">
             <div class="col-xs-6">
               <div class="page-title">
-                <h2>Category name</h2>
+                <h2><%= @taxon.name %></h2>
               </div>
             </div>
             <div class="col-xs-6">
               <ol class="breadcrumb pull-right">
-                <li>
-                  <a href="index.html">Home</a>
-                </li>
+                <li><%= link_to 'Home', potepan_path %></li>
                 <li>
                   <a href="#">shop</a>
                 </li>
-                <li class="active">Category name</li>
+                <li class="active"><%= @taxon.name %></li>
               </ol>
             </div>
           </div>
@@ -94,7 +72,21 @@
                   </div>
                 </div>
               </div>
-
+              <!-- <div class="panel panel-default priceRange">
+                <div class="panel-heading">値段から探す</div>
+                <div class="panel-body clearfix">
+                  <div class="price-slider-inner">
+                    <span class="amount-wrapper">
+                      <input type="text" id="price-amount-1" readonly>
+                      <strong>-</strong>
+                      <input type="text" id="price-amount-2" readonly>
+                    </span>
+                    <div id="price-range"></div>
+                  </div>
+                  <input class="btn btn-default" type="submit" value="絞り込む">
+                  <!-- <span class="priceLabel">Price: <strong>12 円- 30<円/strong></span>
+                </div>
+              </div> -->
               <div class="panel panel-default filterNormal">
                 <div class="panel-heading">色から探す</div>
                 <div class="panel-body">
@@ -142,7 +134,13 @@
                   <div class="productBox">
                     <div class="productImage clearfix">
                       <%= image_tag("img/products/products-01.jpg", :alt => "products-img") %>
-
+                      <!-- <div class="productMasking">
+                        <ul class="list-inline btn-group" role="group">
+                          <li><a data-toggle="modal" href=".login-modal" class="btn btn-default"><i class="fa fa-heart"></i></a></li>
+                          <li><a href="cart_page.html" class="btn btn-default"><i class="fa fa-shopping-cart"></i></a></li>
+                          <li><a class="btn btn-default" data-toggle="modal" href=".quick-view" ><i class="fa fa-eye"></i></a></li>
+                        </ul>
+                      </div> -->
                     </div>
                     <div class="productCaption clearfix">
                       <a href="single_product.html">
@@ -156,7 +154,13 @@
                   <div class="productBox">
                     <div class="productImage clearfix">
                       <%= image_tag("img/products/products-02.jpg", :alt => "products-img") %>
-
+                      <!-- <div class="productMasking">
+                        <ul class="list-inline btn-group" role="group">
+                          <li><a data-toggle="modal" href=".login-modal" class="btn btn-default"><i class="fa fa-heart"></i></a></li>
+                          <li><a href="cart_page.html" class="btn btn-default"><i class="fa fa-shopping-cart"></i></a></li>
+                          <li><a class="btn btn-default" data-toggle="modal" href=".quick-view" ><i class="fa fa-eye"></i></a></li>
+                        </ul>
+                      </div> -->
                     </div>
                     <div class="productCaption clearfix">
                       <a href="single_product.html">
@@ -170,7 +174,13 @@
                   <div class="productBox">
                     <div class="productImage clearfix">
                       <%= image_tag("img/products/products-03.jpg", :alt => "products-img") %>
-
+                      <!-- <div class="productMasking">
+                        <ul class="list-inline btn-group" role="group">
+                          <li><a data-toggle="modal" href=".login-modal" class="btn btn-default"><i class="fa fa-heart"></i></a></li>
+                          <li><a href="cart_page.html" class="btn btn-default"><i class="fa fa-shopping-cart"></i></a></li>
+                          <li><a class="btn btn-default" data-toggle="modal" href=".quick-view" ><i class="fa fa-eye"></i></a></li>
+                        </ul>
+                      </div> -->
                     </div>
                     <div class="productCaption clearfix">
                       <a href="single_product.html">
@@ -184,7 +194,13 @@
                   <div class="productBox">
                     <div class="productImage clearfix">
                       <%= image_tag("img/products/products-04.jpg", :alt => "products-img") %>
-
+                      <!-- <div class="productMasking">
+                        <ul class="list-inline btn-group" role="group">
+                          <li><a data-toggle="modal" href=".login-modal" class="btn btn-default"><i class="fa fa-heart"></i></a></li>
+                          <li><a href="cart_page.html" class="btn btn-default"><i class="fa fa-shopping-cart"></i></a></li>
+                          <li><a class="btn btn-default" data-toggle="modal" href=".quick-view" ><i class="fa fa-eye"></i></a></li>
+                        </ul>
+                      </div> -->
                     </div>
                     <div class="productCaption clearfix">
                       <a href="single_product.html">
@@ -198,7 +214,13 @@
                   <div class="productBox">
                     <div class="productImage clearfix">
                       <%= image_tag("img/products/products-05.jpg", :alt => "products-img") %>
-
+                      <!-- <div class="productMasking">
+                        <ul class="list-inline btn-group" role="group">
+                          <li><a data-toggle="modal" href=".login-modal" class="btn btn-default"><i class="fa fa-heart"></i></a></li>
+                          <li><a href="cart_page.html" class="btn btn-default"><i class="fa fa-shopping-cart"></i></a></li>
+                          <li><a class="btn btn-default" data-toggle="modal" href=".quick-view" ><i class="fa fa-eye"></i></a></li>
+                        </ul>
+                      </div> -->
                     </div>
                     <div class="productCaption clearfix">
                       <a href="single_product.html">
@@ -212,7 +234,13 @@
                   <div class="productBox">
                     <div class="productImage clearfix">
                       <%= image_tag("img/products/products-06.jpg", :alt => "products-img") %>
-
+                      <!-- <div class="productMasking">
+                        <ul class="list-inline btn-group" role="group">
+                          <li><a data-toggle="modal" href=".login-modal" class="btn btn-default"><i class="fa fa-heart"></i></a></li>
+                          <li><a href="cart_page.html" class="btn btn-default"><i class="fa fa-shopping-cart"></i></a></li>
+                          <li><a class="btn btn-default" data-toggle="modal" href=".quick-view" ><i class="fa fa-eye"></i></a></li>
+                        </ul>
+                      </div> -->
                     </div>
                     <div class="productCaption clearfix">
                       <a href="single_product.html">
@@ -226,7 +254,13 @@
                   <div class="productBox">
                     <div class="productImage clearfix">
                       <%= image_tag("img/products/products-07.jpg", :alt => "products-img") %>
-
+                      <!-- <div class="productMasking">
+                        <ul class="list-inline btn-group" role="group">
+                          <li><a data-toggle="modal" href=".login-modal" class="btn btn-default"><i class="fa fa-heart"></i></a></li>
+                          <li><a href="cart_page.html" class="btn btn-default"><i class="fa fa-shopping-cart"></i></a></li>
+                          <li><a class="btn btn-default" data-toggle="modal" href=".quick-view" ><i class="fa fa-eye"></i></a></li>
+                        </ul>
+                      </div> -->
                     </div>
                     <div class="productCaption clearfix">
                       <a href="single_product.html">
@@ -393,84 +427,3 @@
           </div>
         </div>
       </section>
-
-      <!-- FOOTER -->
-      <!-- COPY RIGHT -->
-      <div id="footer" class="copyRight clearfix">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-7 col-xs-12">
-              <p>&copy; 2016-<%= Time.now.year %> Copyright Potepan Store .</p>
-            </div>
-            <div class="col-sm-5 col-xs-12">
-              <ul class="list-inline">
-                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- LOGIN MODAL -->
-    <div class="modal fade" id="login" tabindex="-1" role="dialog">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h3 class="modal-title">log in</h3>
-          </div>
-          <div class="modal-body">
-            <form action="" method="POST" role="form">
-              <div class="form-group">
-                <label for="login-email">Enter Email</label>
-                <input type="email" class="form-control" id="login-email">
-              </div>
-              <div class="form-group">
-                <label for="login-password">Password</label>
-                <input type="password" class="form-control" id="login-password">
-              </div>
-              <div class="checkbox">
-                <label>
-                  <input type="checkbox"> Remember Me
-                </label>
-              </div>
-              <button type="submit" class="btn btn-primary btn-block">log in</button>
-              <button type="button" class="btn btn-link btn-block">Forgot Password?</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- SIGN UP MODAL -->
-    <div class="modal fade" id="signup" tabindex="-1" role="dialog">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h3 class="modal-title">Create an account</h3>
-          </div>
-          <div class="modal-body">
-            <form action="" method="POST" role="form">
-              <div class="form-group">
-                <label for="signup-email">Enter Email</label>
-                <input type="email" class="form-control" id="signup-email">
-              </div>
-              <div class="form-group">
-                <label for="signup-password">Password</label>
-                <input type="password" class="form-control" id="signup-password">
-              </div>
-              <div class="form-group">
-                <label for="signup-password-confirmation">Confirm Password</label>
-                <input type="password" class="form-control" id="signup-password-confirmation">
-              </div>
-              <button type="submit" class="btn btn-primary btn-block">Sign up</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </body>
-</html>
