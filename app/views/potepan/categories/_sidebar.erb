@@ -8,7 +8,7 @@
             <div class="collapse navbar-collapse navbar-ex1-collapse navbar-side-collapse">
               <ul class="nav navbar-nav side-nav">
                 <% taxonomies.each_with_index do |taxonomy, i| %>
-                  <li>
+                  <li id="side_nav_root_category_<%= i %>">
                     <% link_to "javascript:;", "data-toggle": "collapse", "data-target": "#category-#{taxonomy.id}" do %>
                       <%= taxonomy.name %>
                       <i class="fa fa-plus"></i>
