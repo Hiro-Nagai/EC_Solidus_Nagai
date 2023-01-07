@@ -1,6 +1,6 @@
 <% provide(:title, @taxon.name) %>
 <div class="main-wrapper">
-  <!-- LIGHT SECTION --->
+  <!-- LIGHT SECTION -->
   <section class="lightSection clearfix pageHeader">
     <div class="container">
       <div class="row">
@@ -23,7 +23,7 @@
   <section class="mainContent clearfix productsContent">
     <div class="container">
       <div class="row">
-        <%= render "potepan/categories/sidebar", taxonomies: @taxonomies %>
+        <%= render "sidebar", taxonomies: @taxonomies %>
         <div class="col-md-9 col-sm-8 col-xs-12">
           <div class="row filterArea">
             <div class="col-xs-6">
@@ -51,8 +51,8 @@
                       <%= image_tag(product.display_image.attachment(:large), :alt => "products-img") %>
                     </div>
                     <div class="productCaption clearfix">
-                      <h5 id="product_name_<%= i %>"><%= product.name %></h5>
-                      <h3 id="product_price_<%= i %>"><%= product.display_price %></h3>
+                      <h5 <%= i %>><%= product.name %></h5>
+                      <h3 <%= i %>><%= product.display_price %></h3>
                     </div>
                   <% end %>
                 </div>
@@ -63,5 +63,5 @@
       </div>
     </div>
   </section>
-  <%= render "potepan/categories/bottombar", taxonomies: @taxonomies %>
+  <%= render "bottombar", taxonomies: @taxonomies %>
 </div>
