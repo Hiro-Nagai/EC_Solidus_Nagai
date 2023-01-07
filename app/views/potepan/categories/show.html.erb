@@ -1,6 +1,5 @@
 <% provide(:title, @taxon.name) %>
 <div class="main-wrapper">
-  <!-- LIGHT SECTION -->
   <section class="lightSection clearfix pageHeader">
     <div class="container">
       <div class="row">
@@ -19,7 +18,6 @@
       </div>
     </div>
   </section>
-  <!-- MAIN CONTENT SECTION -->
   <section class="mainContent clearfix productsContent">
     <div class="container">
       <div class="row">
@@ -63,5 +61,5 @@
       </div>
     </div>
   </section>
-  <%= render "bottombar", taxonomies: @taxonomies %>
+  <%= render "bottombar_brandlogos", taxonomies: @taxonomies %>
 </div>
