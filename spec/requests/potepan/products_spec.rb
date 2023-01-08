@@ -1,10 +1,13 @@
 require 'rails_helper'
-require 'spree/testing_support/factories' 
 
 RSpec.describe "Products", type: :request do
+  include Rails.application.routes.url_helpers
   describe "GET #show" do
-    let(:product) { create(:product) }
     let(:image) { create(:image) }
+    let(:product) { create(:product, taxons: [taxon]) }
+    let(:taxonomy) { create(:taxonomy) }
+    let(:taxon) { create(:taxon, taxonomy: taxonomy) }
+    
 
     before do
       product.images << image
@@ -28,6 +31,22 @@ RSpec.describe "Products", type: :request do
 
     it "商品の説明が表示されていること" do
       expect(response.body).to include product.description
+    end
+    
+    it "一覧ページに戻るをクリックすると商品カテゴリページへアクセスされていること" do
+      # テストに必要なデータを作成します
+      product = create(:product)
+      taxon = create(:taxon)
+      product.taxons << taxon
+    
+      # ページを表示します
+      visit product_path(product)
+    
+      # 一覧ページに戻るリンクをクリックします
+      click_link '一覧ページへ戻る'
+    
+      # 商品カテゴリページへアクセスされていることを確認します
+      expect(current_path).to eq potepan_category_path(taxon.id)
     end
   end
 end

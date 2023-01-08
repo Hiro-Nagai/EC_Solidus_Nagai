@@ -1,4 +1,6 @@
 require 'rails_helper'
+require 'spree/testing_support/factories'
+
 
 RSpec.describe "Potepan::Categories", type: :request do
   describe "categories/show" do
