@@ -51,6 +51,7 @@ group :development, :test do
   gem 'rails-erd'
   gem 'annotate'
   gem 'capybara'
+  gem 'selenium-webdriver'
 end
 
 group :development do

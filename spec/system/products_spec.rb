@@ -33,20 +33,9 @@ RSpec.describe "Products", type: :request do
       expect(response.body).to include product.description
     end
     
-    it "一覧ページに戻るをクリックすると商品カテゴリページへアクセスされていること" do
-      # テストに必要なデータを作成します
-      product = create(:product)
-      taxon = create(:taxon)
-      product.taxons << taxon
-    
-      # ページを表示します
-      visit product_path(product)
-    
-      # 一覧ページに戻るリンクをクリックします
-      click_link '一覧ページへ戻る'
-    
-      # 商品カテゴリページへアクセスされていることを確認します
-      expect(current_path).to eq potepan_category_path(taxon.id)
+    it "一覧ページに戻るをクリックすると商品カテゴリページへアクセスされていること" do    
+      click_link '一覧ページへ戻る'    
+      expect(current_path).to eq potepan_category_path(taxons.id)
     end
   end
 end
