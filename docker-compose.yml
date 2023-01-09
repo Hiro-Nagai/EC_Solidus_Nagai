@@ -44,9 +44,4 @@ services:
     tty: true
     stdin_open: true
     command: bundle exec rails server -b 0.0.0.0
-  chrome:
-    image: seleniarm/standalone-chromium
-    ports:
-      - "4444:4444"
-    # ref: https://github.com/seleniumhq-community/docker-seleniarm#--shm-size2g
-    shm_size: 2gb
+
