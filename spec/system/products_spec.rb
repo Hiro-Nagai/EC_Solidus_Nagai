@@ -16,8 +16,8 @@ RSpec.describe "Products", type: :system do
       ActiveStorage::Current.host = request.base_url
     end
 
-    it "一覧ページに戻るをクリックすると商品カテゴリページへアクセスされていること" do    
-      visit '一覧ページへ戻る'    
+    it "一覧ページに戻るをクリックすると商品カテゴリページへアクセスされていること" do
+      click_link 'HOME'
       expect(current_path).to eq potepan_category_path(taxons.id)
     end
 
