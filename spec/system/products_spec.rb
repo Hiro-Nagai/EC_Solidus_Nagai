@@ -1,7 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "Products", type: :system do
-  include Rails.application.routes.url_helpers
+RSpec.describe "Potepan::Products", type: :system do
   describe "GET #show" do
     let(:image) { create(:image) }
     let(:product) { create(:product, taxons: [taxon]) }
@@ -16,8 +15,8 @@ RSpec.describe "Products", type: :system do
       ActiveStorage::Current.host = request.base_url
     end
 
-    it "一覧ページに戻るをクリックすると商品カテゴリページへアクセスされていること" do
-      click_link 'HOME'
+    it "一覧ページへ戻るをクリックすると商品カテゴリページへアクセスされていること" do
+      click_link 'A'
       expect(current_path).to eq potepan_category_path(taxons.id)
     end
 
