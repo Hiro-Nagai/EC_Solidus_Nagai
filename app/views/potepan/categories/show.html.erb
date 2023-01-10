@@ -1,23 +1,6 @@
 <% provide(:title, @taxon.name) %>
 <div class="main-wrapper">
-  <section class="lightSection clearfix pageHeader">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-6">
-          <div class="page-title">
-            <h2><%= @taxon.name %></h2>
-          </div>
-        </div>
-        <div class="col-xs-6">
-          <ol class="breadcrumb pull-right">
-            <li><%= link_to 'Home', potepan_path %></li>
-            <li><%= link_to "shop", "#" %></li>
-            <li class="active"><%= @taxon.name %></li>
-          </ol>
-        </div>
-      </div>
-    </div>
-  </section>
+  <%= render "topbar", taxonomies: @taxonomies %>
   <section class="mainContent clearfix productsContent">
     <div class="container">
       <div class="row">
