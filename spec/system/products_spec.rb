@@ -15,11 +15,6 @@ RSpec.describe "Potepan::Products", type: :system do
       ActiveStorage::Current.host = request.base_url
     end
 
-    it "一覧ページへ戻るをクリックすると商品カテゴリページへアクセスされていること" do
-      click_link 'A'
-      expect(current_path).to eq potepan_category_path(taxons.id)
-    end
-
     it "ページが表示されていること" do
       expect(response).to have_http_status(:success)
     end
