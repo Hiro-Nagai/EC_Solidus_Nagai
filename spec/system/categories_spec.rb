@@ -1,3 +1,6 @@
+require 'rails_helper'
+
+
 RSpec.describe "Potepan::Categories", type: :request do
   describe "categories/show" do
     let(:image) { create(:image) }
@@ -15,7 +18,7 @@ RSpec.describe "Potepan::Categories", type: :request do
     end
 
     it "親カテゴリー名(Taxonomy名)が表示されていること" do
-      expect(response.body).to include taxonomy.name
+      expect(page).to include taxonomy.name
     end
 
     it "ページ内の複数箇所に表示されているTaxon名が全てもれなく表示されていること" do
