@@ -1,6 +1,5 @@
 require 'rails_helper'
 
-
 RSpec.describe "Potepan::Categories", type: :request do
   describe "categories/show" do
     let(:image) { create(:image) }
