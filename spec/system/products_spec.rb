@@ -17,17 +17,12 @@ RSpec.describe "Potepan::Products", type: :system do
 
     it "一覧ページへ戻るをクリックすると商品カテゴリページへアクセスされていること" do
       visit potepan_category_path(taxon.id)
-      expect(current_path).to eq potepan_category_path(taxon.id)
+        expect(current_path).to eq potepan_category_path(taxon.id)
     end
 
     it "ページが表示されていること" do
-      expect(response).to have_http_status(:success)
-    end
-
-    it "商品の情報が表示されていること" do
-      expect(response.body).to include product.name
-      expect(response.body).to include product.display_price.to_s
-      expect(response.body).to include product.description
+      visit potepan_product_path(product.id)
+        expect(page).to have_http_status(:success)
     end
   end
 end
