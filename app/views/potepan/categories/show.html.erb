@@ -1,6 +1,6 @@
 <% provide(:title, @taxon.name) %>
 <div class="main-wrapper">
-  <%= render "topbar", taxonomies: @taxonomies %>
+  <%= render "topbar", taxon: @taxon %>
   <section class="mainContent clearfix productsContent">
     <div class="container">
       <div class="row">
@@ -32,7 +32,7 @@
                       <%= image_tag(product.display_image.attachment(:large), :alt => "products-img") %>
                     </div>
                     <div class="productCaption clearfix">
-                      <h5> <%= product.name %></h5>
+                      <h5><%= product.name %></h5>
                       <h3><%= product.display_price %></h3>
                     </div>
                   <% end %>

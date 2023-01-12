@@ -44,4 +44,3 @@ services:
     tty: true
     stdin_open: true
     command: bundle exec rails server -b 0.0.0.0
-

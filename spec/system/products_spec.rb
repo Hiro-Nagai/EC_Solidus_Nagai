@@ -9,10 +9,7 @@ RSpec.describe "Potepan::Products", type: :system do
     
     before do
       product.images << image
-      get potepan_product_path(product.id)
-      # 画像URL取得が上手くいかない問題への対応
-      # https://mng-camp.potepan.com/curriculums/document-for-final-task-2#notes-of-image-test
-      ActiveStorage::Current.host = request.base_url
+      visit potepan_product_path(product.id)
     end
 
     it "一覧ページへ戻るをクリックすると商品カテゴリページへアクセスされていること" do
@@ -21,7 +18,6 @@ RSpec.describe "Potepan::Products", type: :system do
     end
 
     it "ページが表示されていること" do
-      visit potepan_product_path(product.id)
         expect(page).to have_http_status(:success)
     end
   end
