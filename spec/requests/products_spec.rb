@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "Potepan::Products", type: :system do
+RSpec.describe "Potepan::Products", type: :request do
   describe "GET #show" do
     let(:product) { create(:product, taxons: [taxon]) }
     let(:taxonomy) { create(:taxonomy) }
