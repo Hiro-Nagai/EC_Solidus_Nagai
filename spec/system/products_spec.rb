@@ -17,8 +17,11 @@ RSpec.describe "Potepan::Products", type: :system do
       expect(current_path).to eq potepan_category_path(taxon.id)
     end
 
-    it "商品名が表示されていること" do
+    it "商品の情報が表示されていること" do
       expect(page).to have_content(product.name)
+      expect(page).to have_content(product.display_price)
+      expect(page).to have_content(product.description)
     end
+
   end
 end
