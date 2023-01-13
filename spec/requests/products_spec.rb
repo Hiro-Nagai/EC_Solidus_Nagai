@@ -15,9 +15,9 @@ RSpec.describe "Potepan::Products", type: :request do
     end
 
     it "商品の情報が表示されていること" do
-        expect(response.body).to include product.name
-        expect(response.body).to include product.display_price.to_s
-        expect(response.body).to include product.description
+      expect(response.body).to include product.name
+      expect(response.body).to include product.display_price.to_s
+      expect(response.body).to include product.description
     end
   end
 end
