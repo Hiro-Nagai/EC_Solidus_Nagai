@@ -7,6 +7,7 @@ RSpec.describe "Potepan::Categories", type: :system do
     let(:taxon) { create(:taxon) }
     let(:product) { create(:product, taxons: [taxon]) }
     let(:product2) { create(:product) }
+    let(:product3) { create(:product, taxons: [taxon]) }
 
     before do
       product.images << image
@@ -26,7 +27,7 @@ RSpec.describe "Potepan::Categories", type: :system do
     end
 
     it "Taxon名に引き続いてそれに紐づく商品数が表示されていること" do
-      expect(page).to have_content taxon.products.count
+      expect(page).to have_link "#{taxon.name} (#{taxon.products.count})"
     end
 
     it "対象のTaxonに紐付いていない商品が表示されていないこと" do
