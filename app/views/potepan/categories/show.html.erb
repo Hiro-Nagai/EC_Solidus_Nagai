@@ -1,0 +1,48 @@
+<% provide(:title, @taxon.name) %>
+<div class="main-wrapper">
+  <%= render "topbar", name: @taxon.name %>
+  <section class="mainContent clearfix productsContent">
+    <div class="container">
+      <div class="row">
+        <%= render "sidebar", taxonomies: @taxonomies %>
+        <div class="col-md-9 col-sm-8 col-xs-12">
+          <div class="row filterArea">
+            <div class="col-xs-6">
+              <select name="guiest_id1" id="guiest_id1" class="select-drop">
+                <option value="0">並び替え</option>
+                <option value="1">人気順</option>
+                <option value="2">安い順</option>
+                <option value="3">新着順</option>
+                <option value="3">高い順</option>
+              </select>
+            </div>
+            <div class="col-xs-6">
+              <div class="btn-group pull-right" role="group">
+                <button type="button" class="btn btn-default active" onclick="window.location.href='product_grid_left_sidebar.html'"><i class="fa fa-th" aria-hidden="true"></i><span>Grid</span></button>
+                <button type="button" class="btn btn-default" onclick="window.location.href='product_list_left_sidebar.html'"><i class="fa fa-th-list" aria-hidden="true"></i><span>List</span></button>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <% @products.each_with_index do |product, i| %>
+              <div class="col-sm-4 col-xs-12">
+                <div class="productBox">
+                  <%= link_to potepan_product_path(product.id) do %>
+                    <div class="productImage clearfix">
+                      <%= image_tag(product.display_image.attachment(:large), :alt => "products-img") %>
+                    </div>
+                    <div class="productCaption clearfix">
+                      <h5><%= product.name %></h5>
+                      <h3><%= product.display_price %></h3>
+                    </div>
+                  <% end %>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <%= render "bottombar_brandlogos" %>
+</div>

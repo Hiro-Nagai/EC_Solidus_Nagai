@@ -1,6 +1,5 @@
 <% provide(:title, @product.name) %>
 <div class="main-wrapper">
-  <!-- LIGHT SECTION --->
   <section class="lightSection clearfix pageHeader">
     <div class="container">
       <div class="row">
@@ -18,7 +17,6 @@
       </div>
     </div>
   </section>     
-  <!-- MAIN CONTENT SECTION -->
   <section class="mainContent clearfix">
     <div class="container">
       <div class="row singleProduct">
@@ -28,7 +26,7 @@
               <div id="carousel" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                   <% @product.images.each_with_index do |image, i| %>
-                    <div class="item <%= "active" if i.zero? %> " data-thumb="<%= i %>">
+                    <div class="item <%= "active" if i.zero? %>">
                       <%= image_tag(image.attachment(:large)) %>
                     </div>
                   <% end %>
@@ -54,7 +52,11 @@
             </div>
             <div class="media-body">
               <ul class="list-inline">
-                <li><a href="product_grid_left_sidebar.html"><i class="fa fa-reply" aria-hidden="true"></i>一覧ページへ戻る</a></li>
+                <li>
+                  <%= link_to potepan_category_path(@product.taxons.first.id) do%>
+                    <i class="fa fa-reply" aria-hidden="true"></i>一覧ページへ戻る
+                  <% end %>
+                </li>
               </ul>
               <h2><%= @product.name %></h2>
               <h3><%= @product.display_price %></h3>
