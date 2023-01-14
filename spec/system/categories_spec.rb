@@ -5,10 +5,10 @@ RSpec.describe "Potepan::Categories", type: :system do
     let(:image) { create(:image) }
     let(:taxonomy) { create(:taxonomy) }
     let(:taxon) { create(:taxon, taxonomy: taxonomy) }
-    let(:taxon2) { create(:taxon, taxonomy: taxonomy) }
+    let!(:taxon2) { create(:taxon, taxonomy: taxonomy) }
     let(:product) { create(:product, taxons: [taxon]) }
-    let(:product2) { create(:product) }
-    let(:product100) { create(:product, taxons: [taxon2]) }
+    let!(:product2) { create(:product) }
+    let!(:product100) { create(:product, taxons: [taxon2]) }
 
     before do
       product.images << image

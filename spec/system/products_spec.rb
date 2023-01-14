@@ -22,6 +22,5 @@ RSpec.describe "Potepan::Products", type: :system do
       expect(page).to have_content(product.display_price)
       expect(page).to have_content(product.description)
     end
-
   end
 end
