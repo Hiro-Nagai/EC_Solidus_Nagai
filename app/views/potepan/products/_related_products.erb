@@ -6,16 +6,20 @@
   </div>
 
 
+  <% related_products.each_with_index do |product, i| %>
+    <%= link_to potepan_product_path(product.id) do %>
+      <div class="col-md-3 col-sm-6 col-xs-12">
+        <div class="productBox">
+          <div class="productImage clearfix">
+            <%= image_tag(product.images.first.attachment(:large), :alt => "products-img") %>
+          </div>
+          <div class="productCaption clearfix">
+            <h5><%= related_product.name %></h5>
+            <h3><%= related_product.display_price %></h3>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
   
-  <div class="col-md-3 col-sm-6 col-xs-12">
-    <div class="productBox">
-      <div class="productImage clearfix">
-        <%= image_tag("img/products/products-01.jpg", :alt => "products-img") %>
-      </div>
-      <div class="productCaption clearfix">
-        <h5><%= related_product.name %></h5>
-        <h3><%= related_product.display_price %></h3>
-      </div>
-    </div>
-  </div>
 </div>
