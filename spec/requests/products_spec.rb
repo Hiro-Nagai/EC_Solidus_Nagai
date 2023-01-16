@@ -4,7 +4,8 @@ RSpec.describe "Potepan::Products", type: :request do
   describe "GET #show" do
     let(:product) { create(:product, taxons: [taxon]) }
     let(:taxonomy) { create(:taxonomy) }
-    let(:taxon) { create(:taxon, taxonomy: taxonomy) }   
+    let(:taxon) { create(:taxon, taxonomy: taxonomy) }
+
     
     before do
       get potepan_product_path(product.id)
@@ -19,5 +20,7 @@ RSpec.describe "Potepan::Products", type: :request do
       expect(response.body).to include product.display_price.to_s
       expect(response.body).to include product.description
     end
+
+
   end
 end
