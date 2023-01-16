@@ -1170,7 +1170,13 @@ GEM
       aws-eventstream (~> 1, >= 1.0.2)
     bcrypt (3.1.16)
     bcrypt (3.1.16-java)
+    better_errors (2.9.1)
+      coderay (>= 1.0.0)
+      erubi (>= 1.0.0)
+      rack (>= 0.9.0)
     bindex (0.8.1)
+    binding_of_caller (1.0.0)
+      debug_inspector (>= 0.0.1)
     bootsnap (1.7.5)
       msgpack (~> 1.0)
     builder (3.2.4)
@@ -1201,6 +1207,7 @@ GEM
     coffee-script-source (1.12.2)
     concurrent-ruby (1.1.8)
     crass (1.0.6)
+    debug_inspector (1.1.0)
     deface (1.8.1)
       nokogiri (>= 1.6)
       polyglot
@@ -1572,6 +1579,8 @@ PLATFORMS
 DEPENDENCIES
   annotate
   aws-sdk (~> 3.0)
+  better_errors
+  binding_of_caller
   bootsnap
   byebug
   capybara

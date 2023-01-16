@@ -62,6 +62,10 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.1'
 
   gem 'rubocop-airbnb'
+
+    
+  gem 'better_errors' # エラー画面をわかりやすく整形してくれる
+  gem 'binding_of_caller' # better_errorsの画面上にirb/pry(PERL)を表示する
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
