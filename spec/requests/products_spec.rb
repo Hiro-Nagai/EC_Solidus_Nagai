@@ -10,7 +10,7 @@ RSpec.describe "Potepan::Products", type: :request do
       get potepan_product_path(product.id)
     end
 
-    it "ページが表示されていること" do
+    it "ページが表示されている事" do
       expect(response).to have_http_status(:success)
     end
 
