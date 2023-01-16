@@ -8,11 +8,11 @@ RSpec.describe "Spree::ProductDecorator", type: :model do
   let(:taxon2) { create(:taxon) }
 
   describe "Spree::ProductDecorator" do
-    it "関連商品の同士が重複していないこと" do
+    it "関連商品同士が重複していないこと" do
       expect(product.related_products).to eq product.related_products.uniq
     end
 
-    it "productとrelated_productsの情報が重複していないこと" do
+    it "該当商品と関連商品の情報が重複していないこと" do
       expect(product.related_products).not_to include product
     end
   end
