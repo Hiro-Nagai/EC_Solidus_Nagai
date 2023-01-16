@@ -6,7 +6,6 @@ RSpec.describe "Potepan::Products", type: :request do
     let(:taxonomy) { create(:taxonomy) }
     let(:taxon) { create(:taxon, taxonomy: taxonomy) }
 
-    
     before do
       get potepan_product_path(product.id)
     end
@@ -21,6 +20,13 @@ RSpec.describe "Potepan::Products", type: :request do
       expect(response.body).to include product.description
     end
 
-
+    it "関連商品を取得する" do
+      within '.productsContent' do
+        related_products.all? do |related_product|
+          expect(response.body).to include related_product.name
+          expect(response.body).to include related_product.display_price.to_s
+        end
+      end
+    end
   end
 end
