@@ -8,10 +8,10 @@ RSpec.describe "Potepan::Products", type: :request do
     let(:related_products) { create_list(:product, 5, taxons: [taxon]) }
 
     before do
-      get potepan_product_path(product.id)
       related_products.each do |related_product|
         related_product.images << create(:image)
       end
+      get potepan_product_path(product.id)
     end
 
     it "ページが表示されている事" do
@@ -42,10 +42,9 @@ RSpec.describe "Potepan::Products", type: :request do
     context '関連商品が5つある場合' do
       it '4つの商品が表示されること' do
         within '.productsContent' do
-          expect(response.body).to include(related_products[0].name)
-          expect(response.body).to include(related_products[1].name)
-          expect(response.body).to include(related_products[2].name)
-          expect(response.body).to include(related_products[3].name)
+          (0..3).each do |i|
+            expect(response.body).to include(related_products[i].name)
+          end
           expect(response.body).not_to include(related_products[4].name)
         end
       end
