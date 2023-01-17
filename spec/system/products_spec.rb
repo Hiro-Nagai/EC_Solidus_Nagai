@@ -25,8 +25,7 @@ RSpec.describe "Potepan::Products", type: :system do
     end
 
     it "関連商品が4つ表示されていること" do
-      within ('.productCaption')
-      related_products.first(4) do |related_product|
+      related_products.each.first(4) do |related_product|
         expect(page).to have_content(related_product.name)
         expect(page).to have_content(related_product.display_price)
       end
