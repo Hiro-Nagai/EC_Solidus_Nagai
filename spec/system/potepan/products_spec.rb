@@ -9,6 +9,9 @@ RSpec.describe "Potepan::Products", type: :system do
     let(:related_products) { create_list(:product, 5, taxons: [taxon]) }
 
     before do
+      related_products.each do |related_product|
+        related_product.images << create(:image)
+      end
       product.images << image
       visit potepan_product_path(product.id)
     end
@@ -25,15 +28,11 @@ RSpec.describe "Potepan::Products", type: :system do
     end
 
     it "関連商品が4つ表示されていること" do
-      related_products.each.first(4) do |related_product|
-        expect(page).to have_content(related_product.name)
-        expect(page).to have_content(related_product.display_price)
-      end
-    end
-
-    it '関連商品の5つ目が表示されていないこと' do
-      related_products.each.first(4) do |related_product|
-        expect(page).not_to have_content(related_products.name[5])
+      within '.productsContent' do
+        related_products.first(4).all? do |related_product|
+          expect(page).to have_content(related_product.name)
+          expect(page).to have_content(related_product.display_price)
+        end
       end
     end
   end
