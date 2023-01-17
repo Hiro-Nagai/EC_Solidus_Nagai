@@ -5,7 +5,6 @@ class Potepan::ProductsController < ApplicationController
     @related_products = @product.
       related_products.
       distinct.
-      limit(RELATED_PRODUCTS_SHOW_NUM).
-      includes(master: [:default_price, images: { attachment_attachment: :blob }])
+      limit(RELATED_PRODUCTS_SHOW_NUM).includes(master: [:default_price, images: { attachment_attachment: :blob }])
   end
 end
