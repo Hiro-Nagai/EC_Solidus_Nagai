@@ -13,7 +13,7 @@ RSpec.describe "Potepan::Products", type: :system do
       visit potepan_product_path(product.id)
     end
 
-    it "一覧ページへ戻るをクリックすると商品カテゴリページへアクセスされていること" do
+    it "一覧ページへ戻るをクリックすると商品カテゴリページへアクセスされている事" do
       click_link "一覧ページへ戻る"
       expect(current_path).to eq potepan_category_path(taxon.id)
     end
