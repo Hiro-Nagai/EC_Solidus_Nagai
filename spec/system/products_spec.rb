@@ -30,5 +30,11 @@ RSpec.describe "Potepan::Products", type: :system do
         expect(page).to have_content(related_product.display_price)
       end
     end
+
+    it '関連商品の5つ目が表示されていないこと' do
+      related_products.each.first(4) do |related_product|
+        expect(page).not_to have_content(related_products.name[5])
+      end
+    end
   end
 end
