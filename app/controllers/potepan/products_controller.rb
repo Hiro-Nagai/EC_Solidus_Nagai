@@ -4,8 +4,8 @@ class Potepan::ProductsController < ApplicationController
     @product = Spree::Product.find(params[:id])
     @related_products = @product.
       related_products.
-        distinct.
-          limit(RELATED_PRODUCTS_SHOW_NUM).
-            includes(master: [:default_price, images: { attachment_attachment: :blob }])
+      distinct.
+      limit(RELATED_PRODUCTS_SHOW_NUM).
+      includes(master: [:default_price, images: { attachment_attachment: :blob }])
   end
 end
