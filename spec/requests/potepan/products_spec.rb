@@ -14,17 +14,17 @@ RSpec.describe "Potepan::Products", type: :request do
       get potepan_product_path(product.id)
     end
 
-    it "ページが表示されている事" do
+    it "ページが含まれていること" do
       expect(response).to have_http_status(:success)
     end
 
-    it "商品の情報が表示されていること" do
+    it "商品の情報が含まれていること" do
       expect(response.body).to include product.name
       expect(response.body).to include product.display_price.to_s
       expect(response.body).to include product.description
     end
 
-    it "関連商品を取得する" do
+    it "関連商品が含まれること" do
       within '.productsContent' do
         related_products.all? do |related_product|
           expect(response.body).to include related_product.name
@@ -33,14 +33,8 @@ RSpec.describe "Potepan::Products", type: :request do
       end
     end
 
-    it "idを基準として昇順で取得する" do
-      within '.productsContent' do
-        expect(response.body["related_products"]).to include(related_products.sort_by(&:id))
-      end
-    end
-
     context '関連商品が5つある場合' do
-      it '4つの商品が表示されること' do
+      it '4つの商品が含まれること' do
         within '.productsContent' do
           (0..3).each do |i|
             expect(response.body).to include(related_products[i].name)
