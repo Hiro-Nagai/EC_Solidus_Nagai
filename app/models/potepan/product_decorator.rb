@@ -5,4 +5,3 @@ module Potepan::ProductDecorator
   end
   Spree::Product.prepend self
 end
-
