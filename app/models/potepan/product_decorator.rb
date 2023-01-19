@@ -7,7 +7,7 @@ module Potepan::ProductDecorator
       distinct.
       order(:id).
       includes(master: [:default_price, images: { attachment_attachment: :blob }])
-    end
+  end
   Spree::Product.prepend self
-  
+
 end
