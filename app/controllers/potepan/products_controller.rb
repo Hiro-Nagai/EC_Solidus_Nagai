@@ -5,7 +5,6 @@ class Potepan::ProductsController < ApplicationController
     @product = Spree::Product.find(params[:id])
     @related_products = @product.
       related_products.
-      includes(master: [:default_price, images: { attachment_attachment: :blob }]).
       limit(RELATED_PRODUCTS_MAXIMUM_COUNT)
   end
 end
