@@ -5,8 +5,7 @@ module Potepan::ProductDecorator
       where(spree_products_taxons: { taxon_id: taxons }).joins(:taxons).
       where.not(id: id).
       distinct.
-      order(:id).
-      includes(master: [:default_price, images: { attachment_attachment: :blob }])
+      order(:id)
   end
   Spree::Product.prepend self
 end

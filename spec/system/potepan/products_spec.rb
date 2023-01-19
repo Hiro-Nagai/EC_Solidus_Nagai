@@ -6,7 +6,12 @@ RSpec.describe "Potepan::Products", type: :system do
     let(:product) { create(:product, taxons: [taxon]) }
     let(:taxonomy) { create(:taxonomy) }
     let(:taxon) { create(:taxon, taxonomy: taxonomy) }  
-    let(:related_products) { create_list(:product, 5, taxons: [taxon]) }
+    let(:related_products) {
+      create_list(:product, 5, taxons: [taxon]).each_with_index do |product, i|
+       product.price = i
+       product.save
+      end   
+     }
 
     before do
       related_products.each do |related_product|

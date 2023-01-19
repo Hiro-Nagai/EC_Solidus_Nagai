@@ -64,8 +64,8 @@ group :development do
   gem 'rubocop-airbnb'
 
     
-  gem 'better_errors' # エラー画面をわかりやすく整形してくれる
-  gem 'binding_of_caller' # better_errorsの画面上にirb/pry(PERL)を表示する
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

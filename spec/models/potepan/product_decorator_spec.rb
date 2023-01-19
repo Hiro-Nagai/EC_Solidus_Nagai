@@ -9,7 +9,7 @@ RSpec.describe "Spree::ProductDecorator", type: :model do
 
   describe "related_products" do
     it "関連商品同士が重複していないこと" do
-      expect(related_products == related_products.uniq).to be true
+      expect(product.related_products).to match_array related_products
     end
 
     it "レシーバ(product)自身を含まないこと" do
