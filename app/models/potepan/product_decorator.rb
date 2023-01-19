@@ -9,5 +9,4 @@ module Potepan::ProductDecorator
       includes(master: [:default_price, images: { attachment_attachment: :blob }])
   end
   Spree::Product.prepend self
-
 end
