@@ -6,6 +6,6 @@ module Potepan::ProductDecorator
       distinct.
       order(:id)
   end
-  
+  # rubocop:disable Rails必要な行
   Spree::Product.prepend self
 end
