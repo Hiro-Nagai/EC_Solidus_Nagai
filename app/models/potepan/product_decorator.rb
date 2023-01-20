@@ -4,7 +4,7 @@ module Potepan::ProductDecorator
       in_taxons(taxons).
       where.not(id: id).
       distinct.
-      order(:id) 
+      order(:id)
   end
   Spree::Product.prepend self
 end
