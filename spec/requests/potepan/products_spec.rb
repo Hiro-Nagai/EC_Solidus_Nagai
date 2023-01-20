@@ -30,12 +30,8 @@ RSpec.describe "Potepan::Products", type: :request do
     end
 
     it "関連商品が含まれること" do
-      within '.productsContent' do
-        related_products.all? do |related_product|
-          expect(response.body).to include related_product.name
-          expect(response.body).to include related_product.display_price.to_s
-        end
-      end
+      expect(response.body).to include(related_products[0].name)
+      expect(response.body).to include(related_products[0].display_price.to_s)
     end
 
     it '5つ目の関連商品が含まれないこと' do
@@ -43,10 +39,8 @@ RSpec.describe "Potepan::Products", type: :request do
     end
 
     it '最大4つの商品が含まれること' do
-      within '.productsContent' do
-        (0..3).each do |i|
-          expect(response.body).to include(related_products[i].name)
-        end
+      (0..3).each do |i|
+        expect(response.body).to include(related_products[i].name)
       end
     end
   end

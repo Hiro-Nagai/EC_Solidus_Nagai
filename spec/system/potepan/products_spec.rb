@@ -32,7 +32,7 @@ RSpec.describe "Potepan::Products", type: :system do
       expect(page).to have_content(product.description)
     end
 
-    it "関連商品が4つ表示されていること" do
+    it "関連商品が最大4つ表示されていること" do
       within '.productsContent' do
         related_products.first(4).all? do |related_product|
           expect(page).to have_content(related_product.name)
