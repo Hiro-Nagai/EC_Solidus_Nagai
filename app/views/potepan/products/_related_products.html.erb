@@ -1,0 +1,22 @@
+<div class="row productsContent">
+  <div class="col-xs-12">
+    <div class="page-header">
+      <h4>関連商品</h4>
+    </div>
+  </div>
+  <% related_products.each do |product, i| %>
+    <%= link_to potepan_product_path(product.id) do %>
+      <div class="col-md-3 col-sm-6 col-xs-12">
+        <div class="productBox">
+          <div class="productImage clearfix">
+              <%= image_tag product.display_image.attachment(:product) %>
+          </div>
+          <div class="productCaption clearfix">
+            <h5><%= product.name %></h5>
+            <h3><%= product.display_price %></h3>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  <% end %> 
+</div>
