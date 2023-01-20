@@ -30,7 +30,7 @@ RSpec.describe "Potepan::Products", type: :request do
     end
 
     it "関連商品が含まれること" do
-      expect(response.body).to include(related_products[0].name)
+      expect(response.body).o include(related_products[0].name)
       expect(response.body).to include(related_products[0].display_price.to_s)
     end
 
