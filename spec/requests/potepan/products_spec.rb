@@ -7,8 +7,8 @@ RSpec.describe "Potepan::Products", type: :request do
     let(:taxon) { create(:taxon, taxonomy: taxonomy) }
     let(:related_products) do
       create_list(:product, 5, taxons: [taxon]).each_with_index do |product, i|
-       product.price = i
-       product.save
+        product.price = i
+        product.save
       end   
     end
 

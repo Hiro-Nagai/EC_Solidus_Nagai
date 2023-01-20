@@ -6,5 +6,6 @@ module Potepan::ProductDecorator
       distinct.
       order(:id)
   end
+  
   Spree::Product.prepend self
 end
