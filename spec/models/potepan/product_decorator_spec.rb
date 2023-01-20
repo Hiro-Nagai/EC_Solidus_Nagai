@@ -4,7 +4,7 @@ RSpec.describe "Spree::ProductDecorator", type: :model do
   let(:taxon) { create(:taxon) }
   let(:taxon2) { create(:taxon) }
   let(:product) { create(:product, taxons: [taxon, taxon2]) }
-  let!(:related_products) { create_list(:product, 5, taxons: [taxon, taxon2], ) }
+  let!(:related_products) { create_list(:product, 5, taxons: [taxon, taxon2]) }
   let(:other_taxon) { create :taxon }
 
   describe "related_products" do
