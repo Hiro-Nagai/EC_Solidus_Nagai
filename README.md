@@ -137,3 +137,4 @@ bundler exec rake spree_auth:admin:create
 
 ### Dockerを利用しない開発環境の構築
 スペック不足など、何らかの理由でDockerでの開発が困難な場合は[こちら](./WITHOUTDOCKER.md)を参考に開発環境をセットアップしてください。
+# EC_Solidus_Nagai
